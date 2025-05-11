@@ -1,0 +1,302 @@
+---
+title: "The language of models"
+date: "2025"
+format: 
+  revealjs:
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    chalkboard: true
+---
+
+```{r}
+#| label: load-pkg
+#| echo: false
+
+library(tidyverse)
+library(gt)
+```
+
+## Goals
+
+-   What is a model?
+-   Why do we model?
+-   What is correlation?
+
+## Test Code
+
+``` python
+for i in range(10):
+  print(i)
+```
+
+# Prediction / classification
+
+# Modeling
+
+## Modeling cars {.smaller}
+
+::: question
+-   What is the relationship between cars' weights and their mileage?
+-   What is your best guess for a car's MPG that weighs 3,500 pounds?
+:::
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1,000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  ) +
+  coord_cartesian(xlim = c(1.5, 5.5), ylim = c(10, 35))
+
+base
+```
+
+## Modelling cars {.smaller}
+
+::: question
+**Describe:** What is the relationship between cars' weights and their mileage?
+:::
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "#E34A6F")
+```
+
+## Modelling cars {.smaller}
+
+::: question
+**Predict:** What is your best guess for a car's MPG that weighs 3,500 pounds?
+:::
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", se = FALSE, color = "darkgray", linetype = "dashed") +
+  geom_segment(
+    aes(x = 3.5, xend = 3.5, y = -Inf, yend = 18.5),
+    color = "#E34A6F"
+  ) +
+  geom_segment(
+    aes(x = -Inf, xend = 3.5, y = 18.5, yend = 18.5),
+    color = "#E34A6F"
+  )
+```
+
+## Modelling
+
+-   Use models to explain the relationship between variables and to make predictions
+-   For now we will focus on **linear** models (but there are *many* *many* other types of models too!)
+
+## Modelling vocabulary
+
+-   Predictor (explanatory variable)
+-   Outcome (response variable)
+-   Regression line
+    -   Slope
+    -   Intercept
+-   Correlation
+
+## Predictor (explanatory variable)
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  )
+```
+
+:::::: columns
+::: {.column width="25%"}
+```{r}
+#| echo: false
+
+mtcars |>
+  select(mpg, wt) |>
+  slice_head(n = 6) |>
+  mutate(across(where(is.numeric), as.character)) |>
+  bind_rows(c(mpg = "...", wt = "...")) |>
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "#E34A6F"),
+      cell_text(color = "white")
+      ),
+    locations = cells_body(columns = wt)
+  ) |>
+  tab_options(table.font.size = px(12))
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+
+base +
+  theme(
+    axis.title.x = element_text(color = "#E34A6F", face = "bold", size = 16)
+  )
+```
+:::
+::::::
+
+## Outcome (response variable)
+
+:::::: columns
+::: {.column width="25%"}
+```{r}
+#| echo: false
+
+mtcars |>
+  select(mpg, wt) |>
+  slice_head(n = 6) |>
+  mutate(across(where(is.numeric), as.character)) |>
+  bind_rows(c(mpg = "...", wt = "...")) |>
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "#E34A6F"),
+      cell_text(color = "white")
+      ),
+    locations = cells_body(columns = mpg)
+  ) |>
+  tab_options(table.font.size = px(12))
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+
+base +
+  theme(
+    axis.title.y = element_text(color = "#E34A6F", face = "bold", size = 16)
+  )
+```
+:::
+::::::
+
+## Regression line
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "#E34A6F", linewidth = 1.5, se = FALSE)
+```
+
+## Regression line: slope
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +
+  annotate(
+    geom = "segment",
+    x = 4, xend = 5, y = 16, yend = 16, 
+    linetype = "dashed", color = "#E34A6F"
+  ) +
+  annotate(
+    geom = "segment",
+    x = 5, xend = 5, y = 16, yend = 10.6, 
+    color = "#E34A6F"
+  ) +
+  annotate(
+    geom = "text",
+    x = 5.2, y = 13, label = "slope", 
+    color = "#E34A6F", size = 5, hjust = 0
+  )
+```
+
+## Regression line: intercept
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "gray", se = FALSE, fullrange = TRUE, linetype = "dashed") +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +
+  scale_x_continuous(limits = c(0, 5.5)) +
+  annotate(
+    geom = "point",
+    shape = 1, size = 4, stroke = 2,
+    x = 0, y = 37.4, 
+    color = "#E34A6F"
+  ) +
+  annotate(
+    geom = "text",
+    label = "intercept",
+    x = 0.5, y = 37.4, 
+    color = "#E34A6F", size = 5, hjust = 0
+  )
+```
+
+## Correlation
+
+```{r}
+#| echo: false
+
+r <- mtcars |>
+  summarize(cor = round(cor(mpg, wt), 2)) |>
+  pull()
+
+base +
+  stat_ellipse(geom = "polygon", color = "#E34A6F", fill = "#E34A6F30") +
+  annotate(
+    geom = "text",
+    x = 3.5, y = 27.5, 
+    label = paste("r =", r),
+    color = "#E34A6F", size = 5, hjust = 0
+  )
+```
+
+## Correlation
+
+-   Ranges between -1 and 1.
+-   Same sign as the slope.
+
+![](images/corr-example.png){fig-align="center"}
+
+## Visualizing the model
+
+```{r}
+#| message: false
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+# Application exercise
+
+## Application exercise: `ae-10-modeling-fish` {.smaller}
+
+::: appex
+-   Go back to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push.
+-   Work on `ae-10-modeling-fish.qmd`.
+:::

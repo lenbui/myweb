@@ -1,0 +1,9 @@
+institute: "Ho Chi Minh University of Science <br> Spring 2025"
+author: "Len Bui"
+logo: "images/logo.png"
+code-line-numbers: false
+filters: [add_editable.lua]
+execute:
+  freeze: auto
+  echo: false
+  warning: false

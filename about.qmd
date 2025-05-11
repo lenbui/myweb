@@ -1,9 +1,18 @@
 ---
 title: "About"
+toc: false
 ---
 
-About this site
+# About Len Bui
 
-```{r}
-1 + 1
-```
+Welcome to my personal page! I'm **Len Bui**, a passionate lecturer with a strong interest in machine learning and data analysis. I thrive on solving complex problems, uncovering insights, and creating impactful solutions.
+
+## Professional Background
+
+## Education & Certifications
+
+## Personal Interests
+
+------------------------------------------------------------------------
+
+*"Data is not just numbers—it tells a story."*

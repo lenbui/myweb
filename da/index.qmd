@@ -1,0 +1,39 @@
+---
+title: Data Analysis
+format: 
+  html:
+    theme: slides.scss
+    toc-title: Content
+    toc-location: left
+---
+
+# Introduction to Data Analysis Course
+
+Welcome to the **Data Analysis** course! In today's data-driven world, the ability to analyze and interpret data is a crucial skill across industries—from business and healthcare to finance and technology. This course is designed to provide you with the foundational knowledge and practical skills needed to work with data effectively.
+
+## What You Will Learn
+
+-   **Fundamentals of Data Analysis**: Understand key concepts, types of data, and the data analysis process.
+-   **Data Cleaning & Preparation**: Learn how to handle missing data, remove duplicates, and format datasets for analysis.
+-   **Exploratory Data Analysis (EDA)**: Use statistical techniques and visualization tools to uncover patterns and insights.
+-   **Data Visualization**: Create meaningful charts and graphs using tools like Python (Matplotlib, Seaborn) or Excel.
+-   **Statistical Techniques**: Apply descriptive and inferential statistics to draw conclusions from data.
+-   **Introduction to Tools**: Gain hands-on experience with popular tools such as Python (Pandas, NumPy), R, SQL, or Excel.
+-   **Real-World Applications**: Work on case studies and projects to solve practical problems.
+
+## Who Should Take This Course?
+
+This course is ideal for:
+
+-   Beginners with no prior experience in data analysis
+-   Professionals looking to enhance their analytical skills
+-   Students and researchers who need to work with data
+-   Business analysts, marketers, and decision-makers who rely on data-driven insights
+
+By the end of this course, you will be able to collect, clean, analyze, and visualize data, empowering you to make informed decisions and solve real-world problems.
+
+# Calendar
+
+# Lectures
+
+-   [The language of models](1-language-of-models.qmd)

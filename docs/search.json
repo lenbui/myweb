@@ -2,15 +2,155 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "myweb",
+    "title": "Homepage",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Courses\n\nData Analysis"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#goals",
+    "href": "da/1-language-of-models.html#goals",
+    "title": "The language of models",
+    "section": "Goals",
+    "text": "Goals\n\nWhat is a model?\nWhy do we model?\nWhat is correlation?"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#test-code",
+    "href": "da/1-language-of-models.html#test-code",
+    "title": "The language of models",
+    "section": "Test Code",
+    "text": "Test Code\nfor i in range(10):\n  print(i)"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#modeling-cars",
+    "href": "da/1-language-of-models.html#modeling-cars",
+    "title": "The language of models",
+    "section": "Modeling cars",
+    "text": "Modeling cars\n\n\nWhat is the relationship between cars’ weights and their mileage?\nWhat is your best guess for a car’s MPG that weighs 3,500 pounds?"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#modelling-cars",
+    "href": "da/1-language-of-models.html#modelling-cars",
+    "title": "The language of models",
+    "section": "Modelling cars",
+    "text": "Modelling cars\n\nDescribe: What is the relationship between cars’ weights and their mileage?"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#modelling-cars-1",
+    "href": "da/1-language-of-models.html#modelling-cars-1",
+    "title": "The language of models",
+    "section": "Modelling cars",
+    "text": "Modelling cars\n\nPredict: What is your best guess for a car’s MPG that weighs 3,500 pounds?"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#modelling",
+    "href": "da/1-language-of-models.html#modelling",
+    "title": "The language of models",
+    "section": "Modelling",
+    "text": "Modelling\n\nUse models to explain the relationship between variables and to make predictions\nFor now we will focus on linear models (but there are many many other types of models too!)"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#modelling-vocabulary",
+    "href": "da/1-language-of-models.html#modelling-vocabulary",
+    "title": "The language of models",
+    "section": "Modelling vocabulary",
+    "text": "Modelling vocabulary\n\nPredictor (explanatory variable)\nOutcome (response variable)\nRegression line\n\nSlope\nIntercept\n\nCorrelation"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#predictor-explanatory-variable",
+    "href": "da/1-language-of-models.html#predictor-explanatory-variable",
+    "title": "The language of models",
+    "section": "Predictor (explanatory variable)",
+    "text": "Predictor (explanatory variable)\n\n\n\n\n\n\n\n\n\n\nmpg\nwt\n\n\n\n\n21\n2.62\n\n\n21\n2.875\n\n\n22.8\n2.32\n\n\n21.4\n3.215\n\n\n18.7\n3.44\n\n\n18.1\n3.46\n\n\n...\n..."
+  },
+  {
+    "objectID": "da/1-language-of-models.html#outcome-response-variable",
+    "href": "da/1-language-of-models.html#outcome-response-variable",
+    "title": "The language of models",
+    "section": "Outcome (response variable)",
+    "text": "Outcome (response variable)\n\n\n\n\n\n\n\n\n\n\nmpg\nwt\n\n\n\n\n21\n2.62\n\n\n21\n2.875\n\n\n22.8\n2.32\n\n\n21.4\n3.215\n\n\n18.7\n3.44\n\n\n18.1\n3.46\n\n\n...\n..."
+  },
+  {
+    "objectID": "da/1-language-of-models.html#regression-line",
+    "href": "da/1-language-of-models.html#regression-line",
+    "title": "The language of models",
+    "section": "Regression line",
+    "text": "Regression line"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#regression-line-slope",
+    "href": "da/1-language-of-models.html#regression-line-slope",
+    "title": "The language of models",
+    "section": "Regression line: slope",
+    "text": "Regression line: slope"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#regression-line-intercept",
+    "href": "da/1-language-of-models.html#regression-line-intercept",
+    "title": "The language of models",
+    "section": "Regression line: intercept",
+    "text": "Regression line: intercept"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#correlation",
+    "href": "da/1-language-of-models.html#correlation",
+    "title": "The language of models",
+    "section": "Correlation",
+    "text": "Correlation"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#correlation-1",
+    "href": "da/1-language-of-models.html#correlation-1",
+    "title": "The language of models",
+    "section": "Correlation",
+    "text": "Correlation\n\nRanges between -1 and 1.\nSame sign as the slope."
+  },
+  {
+    "objectID": "da/1-language-of-models.html#visualizing-the-model",
+    "href": "da/1-language-of-models.html#visualizing-the-model",
+    "title": "The language of models",
+    "section": "Visualizing the model",
+    "text": "Visualizing the model"
+  },
+  {
+    "objectID": "da/1-language-of-models.html#application-exercise-ae-10-modeling-fish",
+    "href": "da/1-language-of-models.html#application-exercise-ae-10-modeling-fish",
+    "title": "The language of models",
+    "section": "Application exercise: ae-10-modeling-fish",
+    "text": "Application exercise: ae-10-modeling-fish\n\n\nGo back to your project called ae.\nIf there are any uncommitted files, commit them, and push.\nWork on ae-10-modeling-fish.qmd."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome to my personal page! I’m Len Bui, a passionate lecturer with a strong interest in machine learning and data analysis. I thrive on solving complex problems, uncovering insights, and creating impactful solutions.\n\n\n\n\n\n\n\n\n\n“Data is not just numbers—it tells a story.”"
+  },
+  {
+    "objectID": "about.html#personal-interests",
+    "href": "about.html#personal-interests",
+    "title": "About",
+    "section": "",
+    "text": "“Data is not just numbers—it tells a story.”"
+  },
+  {
+    "objectID": "da/index.html",
+    "href": "da/index.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Welcome to the Data Analysis course! In today’s data-driven world, the ability to analyze and interpret data is a crucial skill across industries—from business and healthcare to finance and technology. This course is designed to provide you with the foundational knowledge and practical skills needed to work with data effectively.\n\n\n\nFundamentals of Data Analysis: Understand key concepts, types of data, and the data analysis process.\nData Cleaning & Preparation: Learn how to handle missing data, remove duplicates, and format datasets for analysis.\nExploratory Data Analysis (EDA): Use statistical techniques and visualization tools to uncover patterns and insights.\nData Visualization: Create meaningful charts and graphs using tools like Python (Matplotlib, Seaborn) or Excel.\nStatistical Techniques: Apply descriptive and inferential statistics to draw conclusions from data.\nIntroduction to Tools: Gain hands-on experience with popular tools such as Python (Pandas, NumPy), R, SQL, or Excel.\nReal-World Applications: Work on case studies and projects to solve practical problems.\n\n\n\n\nThis course is ideal for:\n\nBeginners with no prior experience in data analysis\nProfessionals looking to enhance their analytical skills\nStudents and researchers who need to work with data\nBusiness analysts, marketers, and decision-makers who rely on data-driven insights\n\nBy the end of this course, you will be able to collect, clean, analyze, and visualize data, empowering you to make informed decisions and solve real-world problems."
+  },
+  {
+    "objectID": "da/index.html#what-you-will-learn",
+    "href": "da/index.html#what-you-will-learn",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Fundamentals of Data Analysis: Understand key concepts, types of data, and the data analysis process.\nData Cleaning & Preparation: Learn how to handle missing data, remove duplicates, and format datasets for analysis.\nExploratory Data Analysis (EDA): Use statistical techniques and visualization tools to uncover patterns and insights.\nData Visualization: Create meaningful charts and graphs using tools like Python (Matplotlib, Seaborn) or Excel.\nStatistical Techniques: Apply descriptive and inferential statistics to draw conclusions from data.\nIntroduction to Tools: Gain hands-on experience with popular tools such as Python (Pandas, NumPy), R, SQL, or Excel.\nReal-World Applications: Work on case studies and projects to solve practical problems."
+  },
+  {
+    "objectID": "da/index.html#who-should-take-this-course",
+    "href": "da/index.html#who-should-take-this-course",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "This course is ideal for:\n\nBeginners with no prior experience in data analysis\nProfessionals looking to enhance their analytical skills\nStudents and researchers who need to work with data\nBusiness analysts, marketers, and decision-makers who rely on data-driven insights\n\nBy the end of this course, you will be able to collect, clean, analyze, and visualize data, empowering you to make informed decisions and solve real-world problems."
   }
 ]
