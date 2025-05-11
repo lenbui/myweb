@@ -36,4 +36,4 @@ By the end of this course, you will be able to collect, clean, analyze, and visu
 
 # Lectures
 
--   [The language of models](1-language-of-models.qmd)
+-   [Data analysis book](book-Z.html)
