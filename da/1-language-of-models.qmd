@@ -23,7 +23,7 @@ library(gt)
 -   Why do we model?
 -   What is correlation?
 
-## Test Code
+## Test Code 2
 
 ``` python
 for i in range(10):
