@@ -14,11 +14,11 @@
     "text": "Goals\n\nWhat is a model?\nWhy do we model?\nWhat is correlation?"
   },
   {
-    "objectID": "da/1-language-of-models.html#test-code",
-    "href": "da/1-language-of-models.html#test-code",
+    "objectID": "da/1-language-of-models.html#test-code-2",
+    "href": "da/1-language-of-models.html#test-code-2",
     "title": "The language of models",
-    "section": "Test Code",
-    "text": "Test Code\nfor i in range(10):\n  print(i)"
+    "section": "Test Code 2",
+    "text": "Test Code 2\nfor i in range(10):\n  print(i)"
   },
   {
     "objectID": "da/1-language-of-models.html#modeling-cars",
